@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <title>Aqiqah Bahagia - Premium Aqiqah & Nasi Box</title>
+  <title>Azmalia Aqiqah - Premium Aqiqah & Nasi Box</title>
   <!-- Meta tag Open Graph untuk preview di WhatsApp/Facebook/Twitter -->
   <!-- Open Graph / Facebook & WhatsApp -->
   <meta property="og:title" content="Azmalia Aqiqah - Layanan Syar'i & Profesional">
@@ -202,6 +202,39 @@
       background: linear-gradient(135deg, #d43f7a, #e8669c);
       color: white;
     }
+
+    
+  /* Gradient Premium untuk teks */
+  .text-gradient-premium {
+    background: linear-gradient(135deg, #d60058 0%, #d60058 40%, #d60058 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Background gradient hero yang lebih cerah */
+  .gradient-pink-hero {
+    background: linear-gradient(145deg, #fff0f5 0%, #ffe4ec 50%, #fff5f8 100%);
+    border: 1px solid rgba(212, 63, 122, 0.2);
+  }
+  
+  /* Animasi bounce untuk dekorasi */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  /* Hover effect untuk container gambar */
+  .goat-image-container:hover .rounded-2xl {
+    box-shadow: 0 20px 40px -12px rgba(212, 63, 122, 0.3);
+  }
+
   </style>
 </head>
 <body>
@@ -259,32 +292,72 @@
     </div>
   </div>
 
-  <!-- HOME Section (Hero/About) -->
-  <section id="home" class="scroll-mt-28 mb-12">
-    <div class="gradient-pink-light rounded-3xl p-8 md:p-10 text-center shadow-sm border border-pink-100">
-     
-      <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-5 py-2 mb-5">
-        <i class="fas fa-star-of-life text-[#d43f7a] text-sm"></i>
-        <span class="text-xs font-semibold text-[#b8326a] tracking-wide">LAYANAN SYAR'I & PROFESIONAL</span>
-      </div>
-      <h2 class="text-3xl md:text-5xl font-serif-alt font-bold text-gray-800 mb-4">Layanan Aqiqah &<br>Syukuran <span class="text-[#b00043]">Premium</span></h2>
-      <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">Daging kambing premium pilihan, proses pemotongan sesuai syariat, higienis, dan siap antar ke rumah Anda. Nikmati kemudahan pesan online dengan harga terbaik.</p>
-      <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
-        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
-          <i class="fas fa-check-circle text-[#d43f7a] text-sm"></i>
-          <span class="text-xs font-medium text-gray-700">Bersertifikat HALAL</span>
+ <!-- HOME Section (Hero/About) -->
+<section id="home" class="scroll-mt-28 mb-12">
+  <div class="gradient-pink-hero rounded-3xl p-6 md:p-8 shadow-xl border border-pink-200 overflow-hidden relative">
+    
+    <!-- Background Decoration -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-pink-200/30 rounded-full blur-3xl -z-0"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-pink-300/20 rounded-full blur-2xl -z-0"></div>
+    
+    <div class="relative z-10">
+      <!-- Flex Container untuk Text & Image -->
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+        
+        <!-- Left Side - Text Content -->
+        <div class="flex-1 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur rounded-full px-5 py-2 mb-5 shadow-md">
+            <i class="fas fa-star-of-life text-[#d43f7a] text-sm"></i>
+            <span class="text-xs font-semibold text-[#b8326a] tracking-wide">LAYANAN SYAR'I & PROFESIONAL</span>
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif-alt font-bold text-gray-800 mb-4 leading-tight">
+            Layanan Aqiqah &<br>Syukuran 
+            <span class="text-gradient-premium">Premium</span>
+          </h2>
+          
+          <p class="text-gray-600 text-sm md:text-base max-w-lg leading-relaxed mx-auto md:mx-0">
+            Daging kambing premium pilihan, proses pemotongan sesuai syariat, higienis, dan siap antar ke rumah Anda. Nikmati kemudahan pesan online dengan harga terbaik.
+          </p>
+          
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-6">
+            <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+              <i class="fas fa-check-circle text-[#d43f7a] text-sm"></i>
+              <span class="text-xs font-medium text-gray-700">Bersertifikat HALAL</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+              <i class="fas fa-truck text-[#d43f7a] text-sm"></i>
+              <span class="text-xs font-medium text-gray-700">Gratis Ongkir</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+              <i class="fas fa-clock text-[#d43f7a] text-sm"></i>
+              <span class="text-xs font-medium text-gray-700">Tepat Waktu</span>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
-          <i class="fas fa-truck text-[#d43f7a] text-sm"></i>
-          <span class="text-xs font-medium text-gray-700">Gratis Ongkir</span>
-        </div>
-        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
-          <i class="fas fa-clock text-[#d43f7a] text-sm"></i>
-          <span class="text-xs font-medium text-gray-700">Tepat Waktu</span>
-        </div>
+        
+        <!-- Right Side - 3D Goat Animation Image -->
+        <!-- Setelah background dihapus, pake kode ini -->
+<div class="flex-1 flex justify-center md:justify-end">
+  <div class="relative">
+    <img src="goat_animasi.png" 
+         alt="Anak Bahagia dengan Kambing Aqiqah" 
+         class="w-64 md:w-72 lg:w-80 h-auto drop-shadow-xl transition-all duration-500 hover:scale-105">
+    
+    <!-- Floating Decorative Elements -->
+    <div class="absolute -top-2 -right-2 bg-[#d43f7a] rounded-full p-1.5 shadow-lg animate-bounce">
+      <i class="fas fa-heart text-white text-xs"></i>
+    </div>
+    <div class="absolute -bottom-2 -left-2 bg-amber-400 rounded-full p-1.5 shadow-lg animate-pulse">
+      <i class="fas fa-star text-white text-xs"></i>
+    </div>
+  </div>
+</div>
+        
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- 6 Frame Foto Kambing Bulat -->
   <section class="mb-14">
