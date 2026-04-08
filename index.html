@@ -235,6 +235,60 @@
     box-shadow: 0 20px 40px -12px rgba(212, 63, 122, 0.3);
   }
 
+  /* Efek hover untuk gallery */
+  .gallery-item {
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-item:hover .circle-frame {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px -12px rgba(212, 63, 122, 0.4);
+  }
+  
+  /* Animasi fade in untuk popup */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  #imagePopup.show {
+    display: flex !important;
+    animation: fadeIn 0.3s ease;
+  }
+
+  #giftPopup.show {
+    display: flex !important;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Line clamp untuk membatasi teks */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Hover scale lebih halus */
+  .group:hover .group-hover\:scale-102 {
+    transform: scale(1.02);
+  }
+  
+  /* Animasi fade in untuk popup */
+  #testimoniPopup.show {
+    display: flex !important;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
   </style>
 </head>
 <body>
@@ -257,7 +311,7 @@
       </div>
     <!-- Logo Halal di header - Versi Besar (tapi sesuaikan ukuran) -->
 <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 shadow-sm">
-  <img src="halal.jpeg" alt="Sertifikat Halal" class="w-10 h-10 object-contain drop-shadow-sm">
+  <img src="image/halal.jpeg" alt="Sertifikat Halal" class="w-10 h-10 object-contain drop-shadow-sm">
   <div>
     <span class="text-xs font-extrabold text-[#b8326a] tracking-wide">TERSERTIFIKASI</span>
     <div class="flex items-center gap-1">
@@ -340,7 +394,7 @@
         <!-- Setelah background dihapus, pake kode ini -->
 <div class="flex-1 flex justify-center md:justify-end">
   <div class="relative">
-    <img src="goat_animasi.png" 
+    <img src="image/goat_animasi.png" 
          alt="Anak Bahagia dengan Kambing Aqiqah" 
          class="w-64 md:w-72 lg:w-80 h-auto drop-shadow-xl transition-all duration-500 hover:scale-105">
     
@@ -360,72 +414,97 @@
 </section>
 
   <!-- 6 Frame Foto Kambing Bulat -->
-  <section class="mb-14">
-    <div class="text-center mb-8">
-      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-images text-[#d43f7a]"></i> Galeri Kambing Premium</h2>
-      <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto mt-3 rounded-full"></div>
-      <p class="text-gray-500 text-sm mt-2">Hewan sehat & berkualitas terbaik</p>
+<section class="mb-14">
+  <div class="text-center mb-8">
+    <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-images text-[#d43f7a]"></i> Galeri Kambing Premium</h2>
+    <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto mt-3 rounded-full"></div>
+    <p class="text-gray-500 text-sm mt-2">*Klik foto untuk melihat lebih jelas | Hewan sehat & berkualitas terbaik</p>
+  </div>
+  
+  <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+    <!-- Frame 1 - Hemat -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/hemat.jpeg', 'Kambing Hemat', 'Bobot 15 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/hemat.jpeg" alt="Kambing Hemat" class="w-full h-full object-cover">
+      </div>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Hemat</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 15 kg Hidup</p>
     </div>
-    <div class="flex flex-wrap justify-center gap-10 md:gap-16">
-      <!-- Frame 1 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="hemat.jpeg" alt="Kambing PE" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-brown-800 mt-3">Kambing Hemat</p>
-        <p class="text-xs text-orange-500">Bobot 15 kg Hidup</p>
+    
+    <!-- Frame 2 - Spesial -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/spesial.jpeg', 'Kambing Spesial', 'Bobot 17 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/spesial.jpeg" alt="Kambing Spesial" class="w-full h-full object-cover">
       </div>
-      <!-- Frame 2 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="spesial.jpeg" alt="Kambing Jawarandu" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Spesial</p>
-        <p class="text-xs text-orange-500">Bobot 17 kg Hidup</p>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Spesial</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 17 kg Hidup</p>
+    </div>
+    
+    <!-- Frame 3 - Super -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/super.jpeg', 'Kambing Super', 'Bobot 19 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/super.jpeg" alt="Kambing Super" class="w-full h-full object-cover">
       </div>
-      <!-- Frame 3 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="super.jpeg" alt="Kambing Gibas" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Super</p>
-        <p class="text-xs text-orange-500">Bobot 19 kg Hidup</p>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Super</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 19 kg Hidup</p>
+    </div>
+    
+    <!-- Frame 4 - Istimewa -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/istimewa.jpeg', 'Kambing Istimewa', 'Bobot 22 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/istimewa.jpeg" alt="Kambing Istimewa" class="w-full h-full object-cover">
       </div>
-      
-       <!-- Frame 4 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="istimewa.jpeg" alt="Kambing PE" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Istimewa</p>
-        <p class="text-xs text-orange-500">Bobot 22 kg Hidup</p>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Istimewa</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 22 kg Hidup</p>
+    </div>
+    
+    <!-- Frame 5 - Khusus -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/khusus.jpeg', 'Kambing Khusus', 'Bobot 25 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/khusus.jpeg" alt="Kambing Khusus" class="w-full h-full object-cover">
       </div>
-      <!-- Frame 5 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="khusus.jpeg" alt="Kambing Jawarandu" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Khusus</p>
-        <p class="text-xs text-orange-500">Bobot 25 kg Hidup</p>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Khusus</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 25 kg Hidup</p>
+    </div>
+    
+    <!-- Frame 6 - Jumbo -->
+    <div class="text-center cursor-pointer gallery-item" onclick="openPopup('image/jumbo.jpeg', 'Kambing Jumbo', 'Bobot 28 kg Hidup')">
+      <div class="circle-frame overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="image/jumbo.jpeg" alt="Kambing Jumbo" class="w-full h-full object-cover">
       </div>
-      <!-- Frame 6 -->
-      <div class="text-center">
-        <div class="circle-frame overflow-hidden mx-auto">
-          <img src="jumbo.jpeg" alt="Kambing Gibas" class="w-full h-full object-cover">
-        </div>
-        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Jumbo</p>
-        <p class="text-xs text-orange-500">Bobot 28 kg Hidup</p>
-      </div>
+      <p class="text-base font-semibold text-gray-800 mt-3">Kambing Jumbo</p>
+      <p class="text-xs text-[#c6a100]">⚖️ Bobot 28 kg Hidup</p>
+    </div>
+  </div>
+  
+  <div class="flex justify-center mt-6">
+    <div class="inline-flex items-center gap-2 bg-[#fce4ec] rounded-full px-5 py-2 shadow-sm">
+      <i class="fas fa-certificate text-[#d43f7a] text-xs"></i>
+      <span class="text-xs font-medium text-[#b8326a]">Bersertifikat Halal & Sehat</span>
+      <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+    </div>
+  </div>
+</section>
 
+<!-- Popup Modal untuk Fullscreen Image -->
+<div id="imagePopup" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center" onclick="closePopup()">
+  <div class="relative max-w-3xl mx-auto p-4" onclick="event.stopPropagation()">
+    <!-- Tombol Close -->
+    <button onclick="closePopup()" class="absolute -top-12 right-0 text-white text-2xl hover:text-[#d43f7a] transition">
+      <i class="fas fa-times-circle"></i>
+    </button>
+    
+    <!-- Image Display -->
+    <img id="popupImage" src="" alt="Fullscreen" class="w-full h-auto max-h-[80vh] object-contain rounded-xl shadow-2xl">
+    
+    <!-- Caption -->
+    <div id="popupCaption" class="text-center text-white mt-4">
+      <h3 id="popupTitle" class="text-lg font-bold"></h3>
+      <p id="popupDesc" class="text-sm text-gray-300"></p>
     </div>
-    <div class="flex justify-center mt-6">
-      <div class="inline-flex items-center gap-2 bg-[#fce4ec] rounded-full px-5 py-2 shadow-sm">
-        <i class="fas fa-certificate text-[#d43f7a] text-xs"></i>
-        <span class="text-xs font-medium text-[#b8326a]">Bersertifikat Halal & Sehat</span>
-        <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-      </div>
-    </div>
-  </section>
+  </div>
+</div>
+
 
   <!-- PAKET AQIQAH KAMBING MASAK (3 Kategori - Card Design with Food Images) -->
 <section id="paket-aqiqah" class="mb-14 scroll-mt-28">
@@ -443,7 +522,7 @@
 <div class="card-premium hover-lift overflow-hidden rounded-2xl">
   <div class="relative">
     <!-- Food Image -->
-    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+    <img src="image/paket_best.png" 
          alt="Sate dan Gule Kambing" 
          class="w-full h-48 object-cover">
     <div class="absolute top-3 left-3 gradient-pink px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
@@ -519,7 +598,7 @@
 <div class="card-premium hover-lift overflow-hidden rounded-2xl">
   <div class="relative">
     <!-- Food Image -->
-    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+    <img src="image/paket_gule.png" 
          alt="Gule Kambing Spesial" 
          class="w-full h-48 object-cover">
     <div class="absolute top-3 left-3 bg-[#fce4ec] px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
@@ -594,7 +673,7 @@
 <div class="card-premium hover-lift overflow-hidden rounded-2xl">
   <div class="relative">
     <!-- Food Image -->
-    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+    <img src="image/kambing_guling.png" 
          alt="Kambing Guling Utuh" 
          class="w-full h-48 object-cover">
     <div class="absolute top-3 left-3 bg-amber-500 px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
@@ -667,117 +746,175 @@
   </div>
 </section>
 
-  <!-- Catatan Informasi Ketentuan + Kelebihan -->
-  <section class="mb-12">
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Card Ketentuan -->
-      <div class="bg-[#fce4ec] rounded-2xl p-6 border-l-8 border-[#d43f7a] shadow-md">
-        <div class="flex gap-3">
-          <i class="fas fa-clipboard-list text-[#d43f7a] text-xl"></i>
-         <div>
-  <h4 class="font-serif-alt font-bold text-gray-800 mb-2 text-xl">Ketentuan Paket</h4>
   
-  <!-- Harga dasar -->
-  <div class="bg-[#fce4ec]/50 rounded-xl p-3 mb-3">
-    <p class="text-sm font-semibold text-[#b8326a]">
-      <i class="fas fa-tag mr-1"></i> Harga Paket untuk 1 ekor Domba atau Kambing
-    </p>
-    <p class="text-xs text-gray-500 ml-5">*belum termasuk nasi box</p>
-  </div>
-  
-  <!-- Biaya pembungkusan -->
-  <div class="mb-3">
-    <div class="flex items-center gap-2 mb-1">
-      <i class="fas fa-box-open text-[#d43f7a] text-sm"></i>
-      <span class="font-semibold text-gray-800 text-sm">Biaya Pembungkusan:</span>
-    </div>
-    <div class="flex flex-wrap gap-2 ml-6">
-      <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Plastik: Rp 500 / bks</span>
-      <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Cup: Rp 1.000 / bks</span>
-    </div>
-  </div>
-  
-  <!-- Menu variatif -->
-  <div class="mb-3">
-    <div class="flex items-center gap-2 mb-1">
-      <i class="fas fa-utensils text-[#d43f7a] text-sm"></i>
-      <span class="font-semibold text-gray-800 text-sm">Menu Variatif:</span>
-    </div>
-    <div class="flex flex-wrap gap-2 ml-6">
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Semur</span>
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Sop</span>
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Tongseng</span>
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Teriyaki</span>
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Rendang</span>
-      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Lada Hitam</span>
-    </div>
-  </div>
-  
-  <!-- Catatan tambahan -->
-  <div class="border-t border-pink-100 pt-2 mt-2">
-    <p class="text-xs text-gray-500">
-      <i class="fas fa-info-circle text-[#d43f7a] mr-1"></i> 
-      Tambahan nasi box bisa dipesan terpisah
-    </p>
-    <!-- <p class="text-xs text-gray-500 mt-1">
-      <i class="fas fa-check-circle text-emerald-500 mr-1 text-[10px]"></i> 
-      Free sambal & acar
-    </p> -->
-  </div>
-</div>
+
+
+
+
+
+<!-- Catatan Informasi Ketentuan + Kelebihan -->
+<section class="mb-12">
+  <div class="grid md:grid-cols-2 gap-6">
+    
+    <!-- Card Ketentuan -->
+    <div class="bg-[#fce4ec] rounded-2xl p-6 border-l-8 border-[#d43f7a] shadow-md h-fit">
+      <div class="flex gap-3">
+        <i class="fas fa-clipboard-list text-[#d43f7a] text-xl"></i>
+        <div class="flex-1">
+          <h4 class="font-serif-alt font-bold text-gray-800 mb-2 text-xl">Ketentuan Paket</h4>
+          
+          <!-- Harga dasar -->
+          <div class="bg-[#fce4ec]/50 rounded-xl p-3 mb-3">
+            <p class="text-sm font-semibold text-[#b8326a]">
+              <i class="fas fa-tag mr-1"></i> Harga Paket untuk 1 ekor Domba atau Kambing
+            </p>
+            <p class="text-xs text-gray-500 ml-5">*belum termasuk nasi box</p>
+          </div>
+          
+          <!-- Biaya pembungkusan -->
+          <div class="mb-3">
+            <div class="flex items-center gap-2 mb-1">
+              <i class="fas fa-box-open text-[#d43f7a] text-sm"></i>
+              <span class="font-semibold text-gray-800 text-sm">Biaya Pembungkusan:</span>
+            </div>
+            <div class="flex flex-wrap gap-2 ml-6">
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Plastik: Rp 500 / bks</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Cup: Rp 1.000 / bks</span>
+            </div>
+          </div>
+          
+          <!-- Menu variatif -->
+          <div class="mb-3">
+            <div class="flex items-center gap-2 mb-1">
+              <i class="fas fa-utensils text-[#d43f7a] text-sm"></i>
+              <span class="font-semibold text-gray-800 text-sm">Menu Variatif:</span>
+            </div>
+            <div class="flex flex-wrap gap-2 ml-6">
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Semur</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Sop</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Tongseng</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Teriyaki</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Rendang</span>
+              <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Lada Hitam</span>
+            </div>
+          </div>
+          
+          <!-- Catatan tambahan -->
+          <div class="border-t border-pink-100 pt-2 mt-2">
+            <p class="text-xs text-gray-500">
+              <i class="fas fa-info-circle text-[#d43f7a] mr-1"></i> 
+              Tambahan nasi box bisa dipesan terpisah
+            </p>
+          </div>
         </div>
       </div>
-     <!-- Card Kelebihan - Versi Grid 2 Kolom -->
-<div class="bg-white rounded-2xl p-6 shadow-md border border-pink-100">
-  <h3 class="font-serif-alt font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
-    <i class="fas fa-gem text-[#d43f7a]"></i> Kelebihan Kami
-  </h3>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-scissors text-[#d43f7a] text-sm"></i>
-      <span>Free Biaya Penyembelihan</span>
     </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-fire text-[#d43f7a] text-sm"></i>
-      <span>Free Biaya Masak</span>
+
+    <!-- Card Kelebihan -->
+    <div class="bg-white rounded-2xl p-6 shadow-md border border-pink-100 h-fit">
+      <h3 class="font-serif-alt font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
+        <i class="fas fa-gem text-[#d43f7a]"></i> Kelebihan Kami
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-scissors text-[#d43f7a] text-xs"></i>
+          <span>Free Biaya Penyembelihan</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-fire text-[#d43f7a] text-xs"></i>
+          <span>Free Biaya Masak</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-truck text-[#d43f7a] text-xs"></i>
+          <span>Free Ongkir</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-certificate text-[#d43f7a] text-xs"></i>
+          <span>Free Sertifikat + Frame</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-video text-[#d43f7a] text-xs"></i>
+          <span>Free Dokumentasi</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-mug-hot text-[#d43f7a] text-xs"></i>
+          <span>Free Souvenir Mug + Foto</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-envelope text-[#d43f7a] text-xs"></i>
+          <span>Free Kartu Ucapan & Doa</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-utensil-spoon text-[#d43f7a] text-xs"></i>
+          <span>Free Testfood</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-eye text-[#d43f7a] text-xs"></i>
+          <span>Hewan Bisa Dipilih</span>
+        </div>
+        <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-3 py-1.5 text-xs font-medium text-[#b8326a]">
+          <i class="fas fa-hands-helping text-[#d43f7a] text-xs"></i>
+          <span>Siap menyalurkan ke Yayasan</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Hadiah: Mug & Sertifikat -->
+      <div class="mt-5 pt-3 border-t border-pink-100">
+        <p class="text-xs font-semibold text-gray-700 mb-3 flex items-center gap-1">
+          <i class="fas fa-gift text-[#d43f7a] text-xs"></i>
+          Bonus Eksklusif untuk Setiap Pemesanan:
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <!-- Gambar Mug -->
+          <div class="text-center cursor-pointer" onclick="openPopup('image/gift.jpeg', 'Souvenir Mug Eksklusif', 'Free souvenir mug custom dengan foto buah hati')">
+            <div class="w-28 h-27 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="image/gift.jpeg" alt="Souvenir Mug" class="w-full h-full object-cover">
+            </div>
+            <!-- <p class="text-[12px] text-gray-500 mt-1">🎁 Mug Custom, Sertifikat & Kartu Ucapan</p> -->
+          </div>
+          
+          <!-- Gambar Sertifikat
+          <div class="text-center cursor-pointer" onclick="openPopup('image/sertifikat.jpeg', 'Sertifikat Resmi', 'Free sertifikat aqiqah + frame premium')">
+            <div class="w-24 h-24 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 bg-[#fce4ec] flex items-center justify-center">
+              <img src="image/sertifikat.jpeg" alt="Sertifikat" class="w-full h-full object-cover">
+            </div>
+            <p class="text-[10px] text-gray-500 mt-1">📜 Sertifikat</p>
+          </div>
+          
+          Kartu Ucapan -->
+          <!-- <div class="text-center cursor-pointer" onclick="openPopup('image/kartu_ucapan.jpeg', 'Kartu Ucapan & Doa', 'Free kartu ucapan dan doa untuk kebahagiaan buah hati')">
+            <div class="w-24 h-24 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 bg-[#fce4ec] flex items-center justify-center">
+              <img src="image/kartu_ucapan.jpeg" alt="Kartu Ucapan" class="w-full h-full object-cover">
+            </div>
+            <p class="text-[10px] text-gray-500 mt-1">💌 Kartu Ucapan</p>
+          </div> -->
+        </div>
+        <p class="text-[10px] text-gray-500 text-center mt-3">
+          <i class="fas fa-check-circle text-emerald-500 text-[12px] mr-1"></i> 
+          Setiap paket aqiqah mendapatkan bonus souvenir & sertifikat eksklusif
+        </p>
+      </div>
+      
+      <p class="text-[10px] text-gray-400 mt-3 italic">*Syarat & ketentuan berlaku</p>
     </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-truck text-[#d43f7a] text-sm"></i>
-      <span>Free Ongkir</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-certificate text-[#d43f7a] text-sm"></i>
-      <span>Free Sertifikat + Frame</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-video text-[#d43f7a] text-sm"></i>
-      <span>Free Dokumentasi</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-mug-hot text-[#d43f7a] text-sm"></i>
-      <span>Free Souvenir Mug + Foto</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-envelope text-[#d43f7a] text-sm"></i>
-      <span>Free Kartu Ucapan & Doa</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-utensil-spoon text-[#d43f7a] text-sm"></i>
-      <span>Free Testfood</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-eye text-[#d43f7a] text-sm"></i>
-      <span>Hewan Bisa Dipilih</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
-      <i class="fas fa-hands-helping text-[#d43f7a] text-sm"></i>
-      <span>Siap menyalurkan ke Yayasan</span>
+    
+  </div>
+</section>
+
+<!-- Popup Modal untuk Fullscreen Image -->
+<div id="giftPopup" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center" onclick="closeGiftPopup()">
+  <div class="relative max-w-md mx-auto p-4" onclick="event.stopPropagation()">
+    <button onclick="closeGiftPopup()" class="absolute -top-12 right-0 text-white text-2xl hover:text-[#d43f7a] transition">
+      <i class="fas fa-times-circle"></i>
+    </button>
+    <img id="giftPopupImage" src="" alt="Preview" class="w-full h-auto max-h-[70vh] object-contain rounded-xl shadow-2xl">
+    <div class="text-center text-white mt-3">
+      <h3 id="giftPopupTitle" class="text-base font-bold"></h3>
+      <p id="giftPopupDesc" class="text-xs text-gray-300"></p>
     </div>
   </div>
-  <p class="text-[10px] text-gray-400 mt-3 italic">*Syarat & ketentuan berlaku</p>
 </div>
-    </div>
-  </section>
+
 
 
   <!-- Paket Nasi Box Section -->
@@ -795,7 +932,7 @@
     <!-- Card Nasi Box 1 -->
     <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
       <div class="relative h-40 overflow-hidden">
-        <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" 
+        <img src="image/nasibox_esklusif.png" 
              alt="Nasi Box Spesial" 
              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
@@ -852,7 +989,7 @@
     <!-- Card Nasi Box 2 -->
     <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
       <div class="relative h-40 overflow-hidden">
-        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" 
+        <img src="image/nasi_spesial.png" 
              alt="Nasi Box Premium" 
              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
@@ -924,7 +1061,7 @@
     <!-- Card Nasi Box Ayam 1 -->
     <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
       <div class="relative h-44 overflow-hidden">
-        <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+        <img src="image/ayam_bakar.jpeg" 
              alt="Nasi Box Ayam Bakar" 
              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
@@ -985,7 +1122,7 @@
     <!-- Card Nasi Box Ayam 2 -->
     <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
       <div class="relative h-44 overflow-hidden">
-        <img src="https://images.pexels.com/photos/10810717/pexels-photo-10810717.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+        <img src="image/ayam_semangka.jpeg" 
              alt="Nasi Box Ayam Bakar Premium" 
              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
@@ -1047,49 +1184,212 @@
   
 
   <!-- Testimoni -->
-  <section id="testimoni" class="mb-12 scroll-mt-28">
-    <div class="text-center mb-8">
-      <div class="flex items-center justify-center gap-3 mb-2">
-        <i class="fas fa-comment-dots text-[#d43f7a] text-2xl"></i>
-        <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Testimoni Pelanggan</h2>
+<section id="testimoni" class="mb-12 scroll-mt-28">
+  <div class="text-center mb-8">
+    <div class="flex items-center justify-center gap-3 mb-2">
+      <i class="fas fa-comment-dots text-[#d43f7a] text-2xl"></i>
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Apa Kata Mereka?</h2>
+    </div>
+    <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
+    <p class="text-sm text-gray-500 mt-2">💬 Pelanggan puas dengan layanan kami</p>
+  </div>
+  
+  <!-- Grid Testimoni - 2 baris x 3 kolom -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    
+    <!-- Testimoni 1 - Screenshot Chat -->
+    <div class="group">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-pink-100 hover:border-[#d43f7a]/30" onclick="openTestimoniPopup('image/testimoni1.jpeg', 'Pak Murbani', '★★★★★')">
+        <div class="relative">
+          <img src="image/testimoni1.jpeg" alt="Testimoni Pak Murbani" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-102">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-comment text-white text-xs"></i>
+              <span class="text-white text-xs font-medium">Klik untuk melihat</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#d43f7a] to-[#e8669c] flex items-center justify-center text-white text-xs font-bold">
+                R
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-sm">Pak Murbani</h3>
+                <div class="text-yellow-400 text-[10px]">★★★★★</div>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">WhatsApp</span>
+          </div>
+          <p class="text-xs text-gray-500 line-clamp-2">"Paket best seller puas banget, daging empuk, sate bumbu kacanya enak..."</p>
+        </div>
       </div>
-      <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
     </div>
     
-    <div class="grid md:grid-cols-3 gap-5">
-      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
-          <div><strong class="block text-gray-800">Ibu Rina</strong><div class="text-yellow-400 text-sm">★★★★★</div></div>
+    <!-- Testimoni 2 - Screenshot Chat -->
+    <div class="group">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-pink-100 hover:border-[#d43f7a]/30" onclick="openTestimoniPopup('image/testimoni2.jpeg', 'Pak Vikri', '★★★★★')">
+        <div class="relative">
+          <img src="image/testimoni2.jpeg" alt="Testimoni Pak Vikri" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-102">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-comment text-white text-xs"></i>
+              <span class="text-white text-xs font-medium">Klik untuk melihat</span>
+            </div>
+          </div>
         </div>
-        <p class="text-sm text-gray-600 italic">"Paket best seller puas banget, daging empuk, sate bumbu kacanya enak. Proses transparan dan terpercaya."</p>
-      </div>
-      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
-          <div><strong>Pak Andi</strong><div class="text-yellow-400 text-sm">★★★★★</div></div>
+        <div class="p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#d43f7a] to-[#e8669c] flex items-center justify-center text-white text-xs font-bold">
+                A
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-sm">Pak Vikri</h3>
+                <div class="text-yellow-400 text-[10px]">★★★★★</div>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">WhatsApp</span>
+          </div>
+          <p class="text-xs text-gray-500 line-clamp-2">"Kambing gulingnya juara! Pelayanan ramah, tepat waktu..."</p>
         </div>
-        <p class="text-sm text-gray-600 italic">"Kambing gulingnya juara! Pelayanan ramah, tepat waktu, insyaAllah berkah untuk buah hati."</p>
-      </div>
-      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
-          <div><strong>Bunda Maya</strong><div class="text-yellow-400 text-sm">★★★★☆</div></div>
-        </div>
-        <p class="text-sm text-gray-600 italic">"Nasi box ayam enak dan porsi banyak. Next mau pesan aqiqah lagi untuk adiknya."</p>
       </div>
     </div>
-  </section>
+    
+    <!-- Testimoni 3 - Screenshot Chat -->
+    <div class="group">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-pink-100 hover:border-[#d43f7a]/30" onclick="openTestimoniPopup('image/testimoni3.jpeg', 'Bu Yuli', '★★★★☆')">
+        <div class="relative">
+          <img src="image/testimoni3.jpeg" alt="Testimoni Bu Yuli" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-102">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-comment text-white text-xs"></i>
+              <span class="text-white text-xs font-medium">Klik untuk melihat</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#d43f7a] to-[#e8669c] flex items-center justify-center text-white text-xs font-bold">
+                M
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-sm">Bu Yuli</h3>
+                <div class="text-yellow-400 text-[10px]">★★★★☆</div>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">WhatsApp</span>
+          </div>
+          <p class="text-xs text-gray-500 line-clamp-2">"Nasi box ayam enak dan porsi banyak. Next mau pesan aqiqah lagi..."</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimoni 4 - Screenshot Chat -->
+    <div class="group">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-pink-100 hover:border-[#d43f7a]/30" onclick="openTestimoniPopup('image/testimoni4.jpeg', 'Mba Yulia', '★★★★★')">
+        <div class="relative">
+          <img src="image/testimoni4.jpeg" alt="Testimoni Mba Yulia" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-102">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-comment text-white text-xs"></i>
+              <span class="text-white text-xs font-medium">Klik untuk melihat</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#d43f7a] to-[#e8669c] flex items-center justify-center text-white text-xs font-bold">
+                B
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-sm">Mba Yulia</h3>
+                <div class="text-yellow-400 text-[10px]">★★★★★</div>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">WhatsApp</span>
+          </div>
+          <p class="text-xs text-gray-500 line-clamp-2">"Terima kasih Azmalia Aqiqah, proses cepat dan hasilnya memuaskan..."</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimoni 5 - Screenshot Chat -->
+    <div class="group">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-pink-100 hover:border-[#d43f7a]/30" onclick="openTestimoniPopup('image/testimoni5.jpeg', 'Mas Syahroni', '★★★★★')">
+        <div class="relative">
+          <img src="image/testimoni5.jpeg" alt="Testimoni Mas Syahroni" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-102">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-comment text-white text-xs"></i>
+              <span class="text-white text-xs font-medium">Klik untuk melihat</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#d43f7a] to-[#e8669c] flex items-center justify-center text-white text-xs font-bold">
+                S
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-sm">Mas Syahroni</h3>
+                <div class="text-yellow-400 text-[10px]">★★★★★</div>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">WhatsApp</span>
+          </div>
+          <p class="text-xs text-gray-500 line-clamp-2">"Souvenir mugnya lucu, anak saya senang. Terima kasih Azmalia..."</p>
+        </div>
+      </div>
+    </div>
+    
+   
+  </div>
+  
+  <!-- Statistik tambahan
+  <div class="mt-8 flex flex-wrap justify-center gap-6">
+    <div class="text-center">
+      <div class="text-2xl font-bold text-[#d43f7a]">500+</div>
+      <p class="text-xs text-gray-500">Pelanggan Puas</p>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-[#d43f7a]">100%</div>
+      <p class="text-xs text-gray-500">Halal Terjamin</p>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-[#d43f7a]">⭐ 4.9</div>
+      <p class="text-xs text-gray-500">Rating Pelanggan</p>
+    </div>
+  </div> -->
+</section>
+
+<!-- Popup Modal untuk Fullscreen Testimoni -->
+<div id="testimoniPopup" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center" onclick="closeTestimoniPopup()">
+  <div class="relative max-w-md mx-auto p-4" onclick="event.stopPropagation()">
+    <button onclick="closeTestimoniPopup()" class="absolute -top-12 right-0 text-white text-2xl hover:text-[#d43f7a] transition">
+      <i class="fas fa-times-circle"></i>
+    </button>
+    <img id="testimoniPopupImage" src="" alt="Testimoni" class="w-full h-auto max-h-[80vh] object-contain rounded-xl shadow-2xl">
+    <div class="text-center text-white mt-3">
+      <h3 id="testimoniPopupTitle" class="text-base font-bold"></h3>
+      <div id="testimoniPopupRating" class="text-yellow-400 text-sm"></div>
+    </div>
+  </div>
+</div>
 
   <!-- Video Pemotongan Halal -->
   <section class="mb-12">
     <div class="text-center mb-6">
-      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-video text-[#d43f7a]"></i> Video Proses Halal</h2>
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-video text-[#d43f7a]"></i> Video Proses Aqiqah</h2>
       <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto mt-3 rounded-full"></div>
     </div>
     <div class="bg-gradient-to-br from-[#fce4ec] to-white rounded-2xl overflow-hidden shadow-xl border border-pink-100">
       <video controls poster="https://placehold.co/800x450/d43f7a/white?text=Proses+Pemotongan+Halal+Aqiqah" class="w-full aspect-video object-cover">
-        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+        <source src="vidio/potong_kambing.mp4" type="video/mp4">
       </video>
       <div class="p-4 text-center">
         <p class="text-sm text-gray-700"><i class="fas fa-check-circle text-emerald-500 mr-1"></i> Proses sesuai syariat Islam & higienis.</p>
@@ -1678,7 +1978,95 @@ if (document.getElementById('nasiAyamType2')) {
   document.getElementById('waButtonNasiAyam2').addEventListener('click', () => sendToWhatsAppNasiAyam('nasiAyamType2'));
   updateNasiAyam2();
 }
+// Fungsi untuk membuka popup
+function openPopup(imgSrc, title, desc) {
+  const popup = document.getElementById('imagePopup');
+  const popupImg = document.getElementById('popupImage');
+  const popupTitle = document.getElementById('popupTitle');
+  const popupDesc = document.getElementById('popupDesc');
+  
+  popupImg.src = imgSrc;
+  popupTitle.textContent = title;
+  popupDesc.textContent = desc;
+  
+  popup.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Mencegah scroll
+}
 
+// Fungsi untuk menutup popup
+function closePopup() {
+  const popup = document.getElementById('imagePopup');
+  popup.classList.remove('show');
+  document.body.style.overflow = ''; // Kembalikan scroll
+}
+
+// Tutup popup dengan tombol ESC
+document.addEventListener('keydown', function(e) {
+  const popup = document.getElementById('imagePopup');
+  if (popup.classList.contains('show') && e.key === 'Escape') {
+    closePopup();
+  }
+});
+
+// Fungsi untuk membuka popup gift
+function openPopup(imgSrc, title, desc) {
+  const popup = document.getElementById('giftPopup');
+  const popupImg = document.getElementById('giftPopupImage');
+  const popupTitle = document.getElementById('giftPopupTitle');
+  const popupDesc = document.getElementById('giftPopupDesc');
+  
+  popupImg.src = imgSrc;
+  popupTitle.textContent = title;
+  popupDesc.textContent = desc;
+  
+  popup.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+// Fungsi untuk menutup popup
+function closeGiftPopup() {
+  const popup = document.getElementById('giftPopup');
+  popup.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// Tutup popup dengan tombol ESC
+document.addEventListener('keydown', function(e) {
+  const popup = document.getElementById('giftPopup');
+  if (popup.classList.contains('show') && e.key === 'Escape') {
+    closeGiftPopup();
+  }
+});
+
+// Fungsi untuk membuka popup testimoni
+function openTestimoniPopup(imgSrc, name, rating) {
+  const popup = document.getElementById('testimoniPopup');
+  const popupImg = document.getElementById('testimoniPopupImage');
+  const popupTitle = document.getElementById('testimoniPopupTitle');
+  const popupRating = document.getElementById('testimoniPopupRating');
+  
+  popupImg.src = imgSrc;
+  popupTitle.textContent = name;
+  popupRating.innerHTML = rating;
+  
+  popup.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+// Fungsi untuk menutup popup
+function closeTestimoniPopup() {
+  const popup = document.getElementById('testimoniPopup');
+  popup.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// Tutup popup dengan tombol ESC
+document.addEventListener('keydown', function(e) {
+  const popup = document.getElementById('testimoniPopup');
+  if (popup.classList.contains('show') && e.key === 'Escape') {
+    closeTestimoniPopup();
+  }
+});
 </script>
 </body>
 </html>
