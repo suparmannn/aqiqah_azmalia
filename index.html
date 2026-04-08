@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>Aqiqah Bahagia - Premium Aqiqah & Nasi Box</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts - Elegant & Professional -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Elegant serif for headings */
+    .font-serif-alt {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #fff5f8 0%, #ffffff 100%);
+    }
+    
+    /* Custom scroll - elegant */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f0e6ea;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d43f7a;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #b8326a;
+    }
+    
+    /* Glassmorphism effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 63, 122, 0.15);
+    }
+    
+    /* Gradient Pink yang lebih bold & elegan */
+    .gradient-pink {
+      background: linear-gradient(135deg, #d43f7a 0%, #e8669c 50%, #f08db5 100%);
+    }
+    
+    .gradient-pink-dark {
+      background: linear-gradient(135deg, #b8326a 0%, #d43f7a 100%);
+    }
+    
+    .gradient-pink-light {
+      background: linear-gradient(135deg, #fce4ec 0%, #fff0f5 100%);
+    }
+    
+    /* Hover card animation */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 35px -12px rgba(212, 63, 122, 0.25);
+    }
+    
+    /* WhatsApp bubble pulse */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+      50% { transform: scale(1.08); box-shadow: 0 8px 30px rgba(34,197,94,0.4); }
+    }
+    .wa-pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    /* Active nav link - elegant underline */
+    .nav-active {
+      color: #d43f7a !important;
+      font-weight: 600;
+      position: relative;
+    }
+    .nav-active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, #d43f7a, #e8669c);
+      border-radius: 4px;
+      transform: scaleX(1);
+      transition: transform 0.3s ease;
+    }
+    
+    /* Nav link hover effect */
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #d43f7a, #e8669c);
+      border-radius: 4px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+    .nav-link:hover {
+      color: #d43f7a;
+    }
+    
+    /* Frame lingkaran untuk foto */
+    .circle-frame {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 10px 30px -5px rgba(212, 63, 122, 0.25);
+      transition: all 0.3s ease;
+    }
+    .circle-frame:hover {
+      transform: scale(1.05);
+      border-color: #d43f7a;
+      box-shadow: 0 15px 35px -8px rgba(212, 63, 122, 0.4);
+    }
+    
+    /* Hide scrollbar for horizontal scroll */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    /* Elegant button */
+    .btn-elegant {
+      background: linear-gradient(135deg, #d43f7a 0%, #e8669c 100%);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-elegant:hover {
+      background: linear-gradient(135deg, #b8326a 0%, #d43f7a 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(212, 63, 122, 0.4);
+    }
+    .btn-elegant:active {
+      transform: translateY(0);
+    }
+    
+    /* Card style */
+    .card-premium {
+      background: white;
+      border-radius: 24px;
+      border: 1px solid rgba(212, 63, 122, 0.12);
+      transition: all 0.3s ease;
+    }
+    
+    /* Badge style */
+    .badge-premium {
+      background: linear-gradient(135deg, #d43f7a, #e8669c);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Main Container - Company Profile Style -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 relative">
+  
+ <!-- Sticky Header with Glassmorphism -->
+  <div class="sticky top-4 z-50 glass-card rounded-2xl shadow-lg mb-6 backdrop-blur-md">
+    <!-- Top bar with logo -->
+    <div class="px-6 py-3 flex flex-wrap items-center justify-between border-b border-pink-100">
+      <div class="flex items-center gap-3">
+        <!-- <div class="w-14 h-14 gradient-pink rounded-xl flex items-center justify-center shadow-md">
+          <span class="text-white text-xl font-serif-alt">AZ</span>
+        </div> -->
+        <div>
+          <h1 class="text-4xl font-bold tracking-tight bg-gradient-to-r from-[#d43f7a] to-[#008000] bg-clip-text text-transparent">Azmalia Aqiqah</h1>
+          <p class="text-[11px] text-gray-500 -mt-0.5 tracking-wide">Premium Islamic Service</p>
+        </div>
+      </div>
+    <!-- Logo Halal di header - Versi Besar (tapi sesuaikan ukuran) -->
+<div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 shadow-sm">
+  <img src="halal.jpeg" alt="Sertifikat Halal" class="w-10 h-10 object-contain drop-shadow-sm">
+  <div>
+    <span class="text-xs font-extrabold text-[#b8326a] tracking-wide">TERSERTIFIKASI</span>
+    <div class="flex items-center gap-1">
+      <i class="fas fa-certificate text-[#d43f7a] text-[8px]"></i>
+      <span class="text-[8px] text-gray-500">ID: 36110018815840624</span>
+    </div>
+  </div>
+  <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+</div>
+</div>
+    
+    
+    <!-- Navigation Menu - Professional Icons -->
+    <div class="px-4 py-2 overflow-x-auto scrollbar-hide">
+      <div class="flex gap-6 justify-start md:justify-center min-w-max">
+        <a href="#home" class="nav-link text-sm font-medium text-gray-700 transition py-2 px-3 flex items-center gap-2" data-nav="home">
+          <i class="fas fa-home text-xs"></i> Beranda
+        </a>
+        <a href="#paket-aqiqah" class="nav-link text-sm font-medium text-gray-700 transition py-2 px-3 flex items-center gap-2" data-nav="paket">
+          <i class="fas fa-utensils text-xs"></i> Paket Aqiqah
+        </a>
+        <a href="#nasi-box" class="nav-link text-sm font-medium text-gray-700 transition py-2 px-3 flex items-center gap-2" data-nav="nasi">
+          <i class="fas fa-box text-xs"></i> Nasi Box
+        </a>
+        <a href="#testimoni" class="nav-link text-sm font-medium text-gray-700 transition py-2 px-3 flex items-center gap-2" data-nav="testi">
+          <i class="fas fa-comment text-xs"></i> Testimoni
+        </a>
+        <a href="#kontak" class="nav-link text-sm font-medium text-gray-700 transition py-2 px-3 flex items-center gap-2" data-nav="kontak">
+          <i class="fas fa-phone text-xs"></i> Kontak
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME Section (Hero/About) -->
+  <section id="home" class="scroll-mt-28 mb-12">
+    <div class="gradient-pink-light rounded-3xl p-8 md:p-10 text-center shadow-sm border border-pink-100">
+     
+      <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-5 py-2 mb-5">
+        <i class="fas fa-star-of-life text-[#d43f7a] text-sm"></i>
+        <span class="text-xs font-semibold text-[#b8326a] tracking-wide">LAYANAN SYAR'I & PROFESIONAL</span>
+      </div>
+      <h2 class="text-3xl md:text-5xl font-serif-alt font-bold text-gray-800 mb-4">Layanan Aqiqah &<br>Syukuran <span class="text-[#b00043]">Premium</span></h2>
+      <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">Daging kambing premium pilihan, proses pemotongan sesuai syariat, higienis, dan siap antar ke rumah Anda. Nikmati kemudahan pesan online dengan harga terbaik.</p>
+      <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
+        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
+          <i class="fas fa-check-circle text-[#d43f7a] text-sm"></i>
+          <span class="text-xs font-medium text-gray-700">Bersertifikat HALAL</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
+          <i class="fas fa-truck text-[#d43f7a] text-sm"></i>
+          <span class="text-xs font-medium text-gray-700">Gratis Ongkir</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
+          <i class="fas fa-clock text-[#d43f7a] text-sm"></i>
+          <span class="text-xs font-medium text-gray-700">Tepat Waktu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Frame Foto Kambing Bulat -->
+  <section class="mb-14">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-images text-[#d43f7a]"></i> Galeri Kambing Premium</h2>
+      <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto mt-3 rounded-full"></div>
+      <p class="text-gray-500 text-sm mt-2">Hewan sehat & berkualitas terbaik</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+      <!-- Frame 1 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="hemat.jpeg" alt="Kambing PE" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-brown-800 mt-3">Kambing Hemat</p>
+        <p class="text-xs text-orange-500">Bobot 15 kg Hidup</p>
+      </div>
+      <!-- Frame 2 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="spesial.jpeg" alt="Kambing Jawarandu" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Spesial</p>
+        <p class="text-xs text-orange-500">Bobot 17 kg Hidup</p>
+      </div>
+      <!-- Frame 3 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="super.jpeg" alt="Kambing Gibas" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Super</p>
+        <p class="text-xs text-orange-500">Bobot 19 kg Hidup</p>
+      </div>
+      
+       <!-- Frame 4 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="istimewa.jpeg" alt="Kambing PE" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Istimewa</p>
+        <p class="text-xs text-orange-500">Bobot 22 kg Hidup</p>
+      </div>
+      <!-- Frame 5 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="khusus.jpeg" alt="Kambing Jawarandu" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Khusus</p>
+        <p class="text-xs text-orange-500">Bobot 25 kg Hidup</p>
+      </div>
+      <!-- Frame 6 -->
+      <div class="text-center">
+        <div class="circle-frame overflow-hidden mx-auto">
+          <img src="jumbo.jpeg" alt="Kambing Gibas" class="w-full h-full object-cover">
+        </div>
+        <p class="text-base font-semibold text-gray-800 mt-3">Kambing Jumbo</p>
+        <p class="text-xs text-orange-500">Bobot 28 kg Hidup</p>
+      </div>
+
+    </div>
+    <div class="flex justify-center mt-6">
+      <div class="inline-flex items-center gap-2 bg-[#fce4ec] rounded-full px-5 py-2 shadow-sm">
+        <i class="fas fa-certificate text-[#d43f7a] text-xs"></i>
+        <span class="text-xs font-medium text-[#b8326a]">Bersertifikat Halal & Sehat</span>
+        <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAKET AQIQAH KAMBING MASAK (3 Kategori - Card Design with Food Images) -->
+<section id="paket-aqiqah" class="mb-14 scroll-mt-28">
+  <div class="text-center mb-8">
+    <div class="flex items-center justify-center gap-3 mb-2">
+      <i class="fas fa-drumstick-bite text-[#d43f7a] text-2xl"></i>
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Paket Aqiqah Kambing Masak</h2>
+    </div>
+    <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
+    <p class="text-gray-500 text-sm mt-3">Pilihan menu terbaik dengan cita rasa premium</p>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-6">
+  <!-- 1. Best Seller Card with Image & Dynamic Options -->
+<div class="card-premium hover-lift overflow-hidden rounded-2xl">
+  <div class="relative">
+    <!-- Food Image -->
+    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+         alt="Sate dan Gule Kambing" 
+         class="w-full h-48 object-cover">
+    <div class="absolute top-3 left-3 gradient-pink px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+      <i class="fas fa-fire text-white text-xs"></i>
+      <span class="text-white font-bold text-xs">BEST SELLER</span>
+    </div>
+    <div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-full">
+      <span class="text-[#b8326a] text-[10px] font-semibold">2 Menu Masakan</span>
+    </div>
+  </div>
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">Paket Komplit</h3>
+    <p class="text-sm text-[#d43f7a] font-medium mb-3">Sate + Gule</p>
+    
+    <!-- Pilihan Tipe Kambing -->
+    <div class="mb-4">
+  <div class="mb-4">
+  <label class="text-xs font-semibold text-gray-600 block mb-2">
+    <div class="flex items-center gap-1 mb-1">
+      <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+      <span>Pilih Tipe Kambing:</span>
+    </div>
+    <div class="flex items-center gap-1 text-[9px] font-normal text-gray-400 bg-gray-50 rounded-lg px-2 py-1">
+      <i class="fas fa-info-circle text-[8px] text-[#d43f7a]"></i>
+      <span>*Pilih tipe untuk melihat harga di setiap tipe kambing</span>
+    </div>
+  </label>
+      <select id="kambingType" class="w-full border border-pink-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-1 focus:ring-[#d43f7a]">
+        <option value="Hemat">🐐Hemat - ± 15 kg</option>
+        <option value="Spesial">🐐Spesial - ± 17 kg</option>
+        <option value="Super">🐐Super - ± 19 kg</option>
+        <option value="Istimewa">🐐Istimewa - ± 22 kg</option>
+        <option value="Khusus">🐐Khusus - ± 25 kg</option>
+        <option value="Jumbo">🐐Jumbo - ± 28 kg</option>
+      </select>
+    </div>
+       </div>
+
+    <!-- Pilihan Jenis Kelamin -->
+    <div class="mb-4">
+      <label class="text-xs font-semibold text-gray-600 block mb-2">Pilih Jenis Kelamin:</label>
+      <div class="flex gap-3">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender" value="betina" checked class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Betina</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender" value="jantan" class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Jantan</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Dynamic Content -->
+    <div class="space-y-2 text-sm border-t border-pink-100 pt-3" id="dynamicContent">
+      <div class="flex justify-between"><span class="text-gray-500">Jenis Hewan</span><span class="font-semibold text-gray-800">Kambing PE</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Tipe</span><span class="font-semibold text-gray-800" id="tipeDisplay">Hemat</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Bobot</span><span class="font-semibold text-gray-800" id="bobotDisplay">± 15 kg</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Harga</span><span class="font-bold text-[#d43f7a] text-lg" id="hargaDisplay">Rp 1.800.000</span></div>
+      <div class="flex justify-between items-start"><span class="text-gray-500">Hasil Masakan</span><span class="font-medium text-gray-700 text-xs text-right" id="hasilDisplay">200 tusuk sate<br>+ 55 porsi gule</span></div>
+    </div>
+    
+    <button id="waButton" class="w-full mt-5 btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+      <i class="fab fa-whatsapp"></i> Pesan Sekarang
+    </button>
+  </div>
+</div>
+
+
+
+
+   <!-- 2. Paket 1 Menu Masakan Card with Image & Dynamic Options -->
+<div class="card-premium hover-lift overflow-hidden rounded-2xl">
+  <div class="relative">
+    <!-- Food Image -->
+    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+         alt="Gule Kambing Spesial" 
+         class="w-full h-48 object-cover">
+    <div class="absolute top-3 left-3 bg-[#fce4ec] px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+      <i class="fas fa-utensils text-[#b8326a] text-xs"></i>
+      <span class="text-[#b8326a] font-bold text-xs">1 MENU MASAKAN</span>
+    </div>
+    <div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-full">
+      <span class="text-[#b8326a] text-[10px] font-semibold">Gule Spesial</span>
+    </div>
+  </div>
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">Paket Gule Kambing</h3>
+    <p class="text-sm text-[#d43f7a] font-medium mb-3">1 Menu Masakan - Gule Rempah</p>
+    
+    <!-- Pilihan Tipe Kambing -->
+    <div class="mb-4">
+      <div class="mb-4">
+        <label class="text-xs font-semibold text-gray-600 block mb-2">
+          <div class="flex items-center gap-1 mb-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            <span>Pilih Tipe Kambing:</span>
+          </div>
+          <div class="flex items-center gap-1 text-[9px] font-normal text-gray-400 bg-gray-50 rounded-lg px-2 py-1">
+            <i class="fas fa-info-circle text-[8px] text-[#d43f7a]"></i>
+            <span>*Pilih tipe untuk melihat harga di setiap tipe kambing</span>
+          </div>
+        </label>
+        <select id="kambingType2" class="w-full border border-pink-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-1 focus:ring-[#d43f7a]">
+          <option value="Hemat">🐐 Hemat - ± 15 kg</option>
+          <option value="Spesial">🐐 Spesial - ± 17 kg</option>
+          <option value="Super">🐐 Super - ± 19 kg</option>
+          <option value="Istimewa">🐐 Istimewa - ± 22 kg</option>
+          <option value="Khusus">🐐 Khusus - ± 25 kg</option>
+          <option value="Jumbo">🐐 Jumbo - ± 28 kg</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Pilihan Jenis Kelamin -->
+    <div class="mb-4">
+      <label class="text-xs font-semibold text-gray-600 block mb-2">Pilih Jenis Kelamin:</label>
+      <div class="flex gap-3">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender2" value="betina" checked class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Betina</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender2" value="jantan" class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Jantan</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Dynamic Content -->
+    <div class="space-y-2 text-sm border-t border-pink-100 pt-3" id="dynamicContent2">
+      <div class="flex justify-between"><span class="text-gray-500">Jenis Hewan</span><span class="font-semibold text-gray-800">Kambing PE</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Tipe</span><span class="font-semibold text-gray-800" id="tipeDisplay2">Hemat</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Bobot</span><span class="font-semibold text-gray-800" id="bobotDisplay2">± 15 kg</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Harga</span><span class="font-bold text-[#d43f7a] text-lg" id="hargaDisplay2">Rp 1.700.000</span></div>
+      <div class="flex justify-between items-start"><span class="text-gray-500">Hasil Masakan</span><span class="font-medium text-gray-700 text-sm text-right" id="hasilDisplay2">75 porsi gule</span></div>
+    </div>
+    
+    <button id="waButton2" class="w-full mt-5 btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+      <i class="fab fa-whatsapp"></i> Pesan Sekarang
+    </button>
+  </div>
+</div>
+
+
+
+   <!-- 3. Kambing Guling Card with Image & Dynamic Options -->
+<div class="card-premium hover-lift overflow-hidden rounded-2xl">
+  <div class="relative">
+    <!-- Food Image -->
+    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+         alt="Kambing Guling Utuh" 
+         class="w-full h-48 object-cover">
+    <div class="absolute top-3 left-3 bg-amber-500 px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+      <i class="fas fa-crown text-white text-xs"></i>
+      <span class="text-white font-bold text-xs">KAMBING GULING</span>
+    </div>
+    <div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-full">
+      <span class="text-[#b8326a] text-[10px] font-semibold">Utuh & Wangi</span>
+    </div>
+  </div>
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">Paket Kambing Guling</h3>
+    <p class="text-sm text-[#d43f7a] font-medium mb-3">Guling Utuh Rempap Spesial</p>
+    
+    <!-- Pilihan Tipe Kambing -->
+    <div class="mb-4">
+      <div class="mb-4">
+        <label class="text-xs font-semibold text-gray-600 block mb-2">
+          <div class="flex items-center gap-1 mb-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            <span>Pilih Tipe Kambing:</span>
+          </div>
+          <div class="flex items-center gap-1 text-[9px] font-normal text-gray-400 bg-gray-50 rounded-lg px-2 py-1">
+            <i class="fas fa-info-circle text-[8px] text-[#d43f7a]"></i>
+            <span>*Pilih tipe untuk melihat harga di setiap tipe kambing</span>
+          </div>
+        </label>
+        <select id="kambingType3" class="w-full border border-pink-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-1 focus:ring-[#d43f7a]">
+          <option value="Hemat">🐐 Hemat - ± 15 kg</option>
+          <option value="Spesial">🐐 Spesial - ± 17 kg</option>
+          <option value="Super">🐐 Super - ± 19 kg</option>
+          <option value="Istimewa">🐐 Istimewa - ± 22 kg</option>
+          <option value="Khusus">🐐 Khusus - ± 25 kg</option>
+          <option value="Jumbo">🐐 Jumbo - ± 28 kg</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Pilihan Jenis Kelamin -->
+    <div class="mb-4">
+      <label class="text-xs font-semibold text-gray-600 block mb-2">Pilih Jenis Kelamin:</label>
+      <div class="flex gap-3">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender3" value="betina" checked class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Betina</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="gender3" value="jantan" class="w-4 h-4 text-[#d43f7a] focus:ring-[#d43f7a]">
+          <span class="text-sm text-gray-700">Jantan</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Dynamic Content -->
+    <div class="space-y-2 text-sm border-t border-pink-100 pt-3" id="dynamicContent3">
+      <div class="flex justify-between"><span class="text-gray-500">Jenis Hewan</span><span class="font-semibold text-gray-800">Kambing Gibas</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Tipe</span><span class="font-semibold text-gray-800" id="tipeDisplay3">Hemat</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Bobot</span><span class="font-semibold text-gray-800" id="bobotDisplay3">± 15 kg</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Harga</span><span class="font-bold text-[#d43f7a] text-lg" id="hargaDisplay3">Rp 1.800.000</span></div>
+      <div class="flex justify-between items-start"><span class="text-gray-500">Hasil Masakan</span><span class="font-medium text-gray-700 text-sm text-right" id="hasilDisplay3">30 porsi</span></div>
+    </div>
+    
+    <button id="waButton3" class="w-full mt-5 btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+      <i class="fab fa-whatsapp"></i> Pesan Sekarang
+    </button>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+  <!-- Catatan Informasi Ketentuan + Kelebihan -->
+  <section class="mb-12">
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Card Ketentuan -->
+      <div class="bg-[#fce4ec] rounded-2xl p-6 border-l-8 border-[#d43f7a] shadow-md">
+        <div class="flex gap-3">
+          <i class="fas fa-clipboard-list text-[#d43f7a] text-xl"></i>
+         <div>
+  <h4 class="font-serif-alt font-bold text-gray-800 mb-2 text-xl">Ketentuan Paket</h4>
+  
+  <!-- Harga dasar -->
+  <div class="bg-[#fce4ec]/50 rounded-xl p-3 mb-3">
+    <p class="text-sm font-semibold text-[#b8326a]">
+      <i class="fas fa-tag mr-1"></i> Harga Paket untuk 1 ekor Domba atau Kambing
+    </p>
+    <p class="text-xs text-gray-500 ml-5">*belum termasuk nasi box</p>
+  </div>
+  
+  <!-- Biaya pembungkusan -->
+  <div class="mb-3">
+    <div class="flex items-center gap-2 mb-1">
+      <i class="fas fa-box-open text-[#d43f7a] text-sm"></i>
+      <span class="font-semibold text-gray-800 text-sm">Biaya Pembungkusan:</span>
+    </div>
+    <div class="flex flex-wrap gap-2 ml-6">
+      <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Plastik: Rp 500 / bks</span>
+      <span class="bg-white border border-pink-200 rounded-full px-3 py-1 text-xs text-gray-700">Cup: Rp 1.000 / bks</span>
+    </div>
+  </div>
+  
+  <!-- Menu variatif -->
+  <div class="mb-3">
+    <div class="flex items-center gap-2 mb-1">
+      <i class="fas fa-utensils text-[#d43f7a] text-sm"></i>
+      <span class="font-semibold text-gray-800 text-sm">Menu Variatif:</span>
+    </div>
+    <div class="flex flex-wrap gap-2 ml-6">
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Semur</span>
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Sop</span>
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Tongseng</span>
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Teriyaki</span>
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Rendang</span>
+      <span class="bg-[#fce4ec] rounded-full px-3 py-1 text-xs text-[#b8326a]">Lada Hitam</span>
+    </div>
+  </div>
+  
+  <!-- Catatan tambahan -->
+  <div class="border-t border-pink-100 pt-2 mt-2">
+    <p class="text-xs text-gray-500">
+      <i class="fas fa-info-circle text-[#d43f7a] mr-1"></i> 
+      Tambahan nasi box bisa dipesan terpisah
+    </p>
+    <!-- <p class="text-xs text-gray-500 mt-1">
+      <i class="fas fa-check-circle text-emerald-500 mr-1 text-[10px]"></i> 
+      Free sambal & acar
+    </p> -->
+  </div>
+</div>
+        </div>
+      </div>
+     <!-- Card Kelebihan - Versi Grid 2 Kolom -->
+<div class="bg-white rounded-2xl p-6 shadow-md border border-pink-100">
+  <h3 class="font-serif-alt font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
+    <i class="fas fa-gem text-[#d43f7a]"></i> Kelebihan Kami
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-scissors text-[#d43f7a] text-sm"></i>
+      <span>Free Biaya Penyembelihan</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-fire text-[#d43f7a] text-sm"></i>
+      <span>Free Biaya Masak</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-truck text-[#d43f7a] text-sm"></i>
+      <span>Free Ongkir</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-certificate text-[#d43f7a] text-sm"></i>
+      <span>Free Sertifikat + Frame</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-video text-[#d43f7a] text-sm"></i>
+      <span>Free Dokumentasi</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-mug-hot text-[#d43f7a] text-sm"></i>
+      <span>Free Souvenir Mug + Foto</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-envelope text-[#d43f7a] text-sm"></i>
+      <span>Free Kartu Ucapan & Doa</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-utensil-spoon text-[#d43f7a] text-sm"></i>
+      <span>Free Testfood</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-eye text-[#d43f7a] text-sm"></i>
+      <span>Hewan Bisa Dipilih</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#fce4ec] rounded-full px-4 py-2 text-sm font-medium text-[#b8326a]">
+      <i class="fas fa-hands-helping text-[#d43f7a] text-sm"></i>
+      <span>Siap menyalurkan ke Yayasan</span>
+    </div>
+  </div>
+  <p class="text-[10px] text-gray-400 mt-3 italic">*Syarat & ketentuan berlaku</p>
+</div>
+    </div>
+  </section>
+
+
+  <!-- Paket Nasi Box Section -->
+<section id="nasi-box" class="mb-12 scroll-mt-28">
+  <div class="text-center mb-8">
+    <div class="flex items-center justify-center gap-3 mb-2">
+      <i class="fas fa-box-open text-[#d43f7a] text-2xl"></i>
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Paket Nasi Box</h2>
+    </div>
+    <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
+    <p class="text-sm text-gray-500 mt-2">*belum termasuk masakan kambing</p>
+  </div>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Card Nasi Box 1 -->
+    <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
+      <div class="relative h-40 overflow-hidden">
+        <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" 
+             alt="Nasi Box Spesial" 
+             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+          <span class="text-white text-xs font-semibold">🍱 Nasi Box Eksklusif</span>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-xl text-gray-800">Nasi Box Eksklusif</h3>
+          <span class="bg-[#fce4ec] text-[#b8326a] text-xs font-semibold px-2 py-1 rounded-full">Varian 1</span>
+        </div>
+        
+        <!-- Pilihan Paket Nasi Box -->
+        <div class="mb-4">
+          <label class="text-xs font-semibold text-gray-600 block mb-2 flex items-center gap-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            Pilih Varian Paket:
+          </label>
+          <select id="nasiBoxType" class="w-full border-2 border-pink-100 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-2 focus:ring-[#d43f7a]/20 transition-all bg-white cursor-pointer">
+            <option value="0">Paket 1 - Rp 13.000 (Box Eksklusif + Nasi + Kerupuk + Buah)</option>
+            <option value="1">Paket 2 - Rp 15.000 (+ Bihun Goreng)</option>
+            <option value="2">Paket 3 - Rp 18.000 (+ Sambel Kentang Ati)</option>
+            <option value="3">Paket 4 - Rp 19.000 (+ Telor Pindang)</option>
+            <option value="4">Paket 5 - Rp 21.000 (Lengkap)</option>
+            <option value="5">Paket 6 - Rp 22.000 (Nasi KEBULI Basmati)</option>
+          </select>
+        </div>
+        
+        <!-- Dynamic Content -->
+        <div class="bg-[#fce4ec]/30 rounded-xl p-3 mb-3">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-gray-700 text-sm font-semibold">Harga</span>
+            <span class="font-bold text-[#d43f7a] text-2xl" id="nasiPriceDisplay">Rp 13.000</span>
+          </div>
+          <div class="border-t border-pink-100 pt-2">
+            <p class="text-xs font-semibold text-gray-700 mb-1">📋 Detail Isi:</p>
+            <ul class="text-xs text-gray-600 space-y-0.5" id="menuDisplay">
+              <li>• Box Eksklusif</li>
+              <li>• Nasi putih</li>
+              <li>• Kerupuk Udang</li>
+              <li>• Buah</li>
+              <li>• Acar</li>
+              <li>• Sendok + Tisu</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button id="waButtonNasi" class="w-full btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+    
+    <!-- Card Nasi Box 2 -->
+    <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
+      <div class="relative h-40 overflow-hidden">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" 
+             alt="Nasi Box Premium" 
+             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+          <span class="text-white text-xs font-semibold">🍱 Nasi Box Premium</span>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-xl text-gray-800">Nasi Box Spesial</h3>
+          <span class="bg-[#fce4ec] text-[#b8326a] text-xs font-semibold px-2 py-1 rounded-full">Best Value</span>
+        </div>
+        
+        <!-- Pilihan Paket Nasi Box 2 -->
+        <div class="mb-4">
+          <label class="text-xs font-semibold text-gray-600 block mb-2 flex items-center gap-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            Pilih Varian Paket:
+          </label>
+          <select id="nasiBoxType2" class="w-full border-2 border-pink-100 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-2 focus:ring-[#d43f7a]/20 transition-all bg-white cursor-pointer">
+            <option value="0">Paket 1 - Rp 13.000 (Box Eksklusif + Nasi + Kerupuk + Buah)</option>
+            <option value="1">Paket 2 - Rp 15.000 (+ Bihun Goreng)</option>
+            <option value="2">Paket 3 - Rp 18.000 (+ Sambel Kentang Ati)</option>
+            <option value="3">Paket 4 - Rp 19.000 (+ Telor Pindang)</option>
+            <option value="4">Paket 5 - Rp 21.000 (Lengkap)</option>
+            <option value="5">Paket 6 - Rp 22.000 (Nasi KEBULI Basmati)</option>
+          </select>
+        </div>
+        
+        <!-- Dynamic Content -->
+        <div class="bg-[#fce4ec]/30 rounded-xl p-3 mb-3">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-gray-700 text-sm font-semibold">Harga</span>
+            <span class="font-bold text-[#d43f7a] text-2xl" id="nasiPriceDisplay2">Rp 13.000</span>
+          </div>
+          <div class="border-t border-pink-100 pt-2">
+            <p class="text-xs font-semibold text-gray-700 mb-1">📋 Detail Isi:</p>
+            <ul class="text-xs text-gray-600 space-y-0.5" id="menuDisplay2">
+              <li>• Box Eksklusif</li>
+              <li>• Nasi putih</li>
+              <li>• Kerupuk Udang</li>
+              <li>• Buah</li>
+              <li>• Acar</li>
+              <li>• Sendok + Tisu</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button id="waButtonNasi2" class="w-full btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paket Nasi Box Ayam Section -->
+<section id="nasi-box-ayam" class="mb-12 scroll-mt-28">
+  <div class="text-center mb-8">
+    <div class="flex items-center justify-center gap-3 mb-2">
+      <i class="fas fa-drumstick-bite text-[#d43f7a] text-2xl"></i>
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Paket Nasi Box Ayam</h2>
+    </div>
+    <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
+    <p class="text-sm text-gray-500 mt-2">🍗 Ayam Bakar Pilihan • Bumbu Spesial Rumahan</p>
+  </div>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Card Nasi Box Ayam 1 -->
+    <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
+      <div class="relative h-44 overflow-hidden">
+        <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+             alt="Nasi Box Ayam Bakar" 
+             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-fire text-amber-400 text-xs"></i>
+            <span class="text-white text-xs font-semibold">Ayam Bakar Spesial</span>
+          </div>
+        </div>
+        <div class="absolute top-3 right-3 bg-amber-500/90 backdrop-blur px-2 py-1 rounded-full">
+          <span class="text-white text-[10px] font-semibold"><i class="fas fa-star"></i> Best Menu</span>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-xl text-gray-800">Nasi Box Ayam Bakar</h3>
+          <span class="bg-[#fce4ec] text-[#b8326a] text-xs font-semibold px-2 py-1 rounded-full">🔥 Favorit</span>
+        </div>
+        
+        <!-- Pilihan Paket Nasi Box Ayam -->
+        <div class="mb-4">
+          <label class="text-xs font-semibold text-gray-600 block mb-2 flex items-center gap-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            Pilih Varian Paket:
+          </label>
+          <select id="nasiAyamType" class="w-full border-2 border-pink-100 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-2 focus:ring-[#d43f7a]/20 transition-all bg-white cursor-pointer">
+            <option value="0">🐔 Paket 1 - Rp 23.000 (Ayam Bakar + Lalapan + Sambal)</option>
+            <option value="1">🐔 Paket 2 - Rp 26.000 (+ Buah Segar)</option>
+            <option value="2">🐔 Paket 3 - Rp 29.000 (+ Sambel Kentang Ati + Buah)</option>
+          </select>
+        </div>
+        
+        <!-- Dynamic Content -->
+        <div class="bg-[#fce4ec]/30 rounded-xl p-3 mb-3">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-gray-700 text-sm font-semibold">Harga</span>
+            <span class="font-bold text-[#d43f7a] text-2xl" id="nasiAyamPriceDisplay">Rp 23.000</span>
+          </div>
+          <div class="border-t border-pink-100 pt-2">
+            <p class="text-xs font-semibold text-gray-700 mb-1">📋 Detail Isi:</p>
+            <ul class="text-xs text-gray-600 space-y-0.5" id="nasiAyamMenuDisplay">
+              <li>• Box Eksklusif</li>
+              <li>• Nasi putih</li>
+              <li>• Ayam Bakar 1/4 ekor</li>
+              <li>• Lalapan</li>
+              <li>• Sambal</li>
+              <li>• Kerupuk Udang</li>
+              <li>• Sendok Tissu</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button id="waButtonNasiAyam" class="w-full btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+    
+    <!-- Card Nasi Box Ayam 2 -->
+    <div class="bg-white rounded-2xl shadow-lg hover-lift border border-pink-100 overflow-hidden">
+      <div class="relative h-44 overflow-hidden">
+        <img src="https://images.pexels.com/photos/10810717/pexels-photo-10810717.jpeg?auto=compress&cs=tinysrgb&w=600&h=350&fit=crop" 
+             alt="Nasi Box Ayam Bakar Premium" 
+             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-crown text-amber-400 text-xs"></i>
+            <span class="text-white text-xs font-semibold">Paket Premium</span>
+          </div>
+        </div>
+        <div class="absolute top-3 right-3 bg-[#d43f7a]/90 backdrop-blur px-2 py-1 rounded-full">
+          <span class="text-white text-[10px] font-semibold"><i class="fas fa-gem"></i> Value Plus</span>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-xl text-gray-800">Nasi Box Ayam + Ati</h3>
+          <span class="bg-[#fce4ec] text-[#b8326a] text-xs font-semibold px-2 py-1 rounded-full">⭐ Best Value</span>
+        </div>
+        
+        <!-- Pilihan Paket Nasi Box Ayam 2 -->
+        <div class="mb-4">
+          <label class="text-xs font-semibold text-gray-600 block mb-2 flex items-center gap-1">
+            <i class="fas fa-tag text-[#d43f7a] text-[10px]"></i>
+            Pilih Varian Paket:
+          </label>
+          <select id="nasiAyamType2" class="w-full border-2 border-pink-100 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#d43f7a] focus:ring-2 focus:ring-[#d43f7a]/20 transition-all bg-white cursor-pointer">
+            <option value="0">🐔 Paket 1 - Rp 23.000 (Ayam Bakar + Lalapan + Sambal)</option>
+            <option value="1">🐔 Paket 2 - Rp 26.000 (+ Buah Segar)</option>
+            <option value="2">🐔 Paket 3 - Rp 29.000 (+ Sambel Kentang Ati + Buah)</option>
+          </select>
+        </div>
+        
+        <!-- Dynamic Content -->
+        <div class="bg-[#fce4ec]/30 rounded-xl p-3 mb-3">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-gray-700 text-sm font-semibold">Harga</span>
+            <span class="font-bold text-[#d43f7a] text-2xl" id="nasiAyamPriceDisplay2">Rp 23.000</span>
+          </div>
+          <div class="border-t border-pink-100 pt-2">
+            <p class="text-xs font-semibold text-gray-700 mb-1">📋 Detail Isi:</p>
+            <ul class="text-xs text-gray-600 space-y-0.5" id="nasiAyamMenuDisplay2">
+              <li>• Box Eksklusif</li>
+              <li>• Nasi putih</li>
+              <li>• Ayam Bakar 1/4 ekor</li>
+              <li>• Lalapan</li>
+              <li>• Sambal</li>
+              <li>• Kerupuk Udang</li>
+              <li>• Sendok Tissu</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button id="waButtonNasiAyam2" class="w-full btn-elegant text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="mb-12 scroll-mt-28">
+    <div class="text-center mb-8">
+      <div class="flex items-center justify-center gap-3 mb-2">
+        <i class="fas fa-comment-dots text-[#d43f7a] text-2xl"></i>
+        <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800">Testimoni Pelanggan</h2>
+      </div>
+      <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto rounded-full"></div>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
+          <div><strong class="block text-gray-800">Ibu Rina</strong><div class="text-yellow-400 text-sm">★★★★★</div></div>
+        </div>
+        <p class="text-sm text-gray-600 italic">"Paket best seller puas banget, daging empuk, sate bumbu kacanya enak. Proses transparan dan terpercaya."</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
+          <div><strong>Pak Andi</strong><div class="text-yellow-400 text-sm">★★★★★</div></div>
+        </div>
+        <p class="text-sm text-gray-600 italic">"Kambing gulingnya juara! Pelayanan ramah, tepat waktu, insyaAllah berkah untuk buah hati."</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-[#d43f7a]">
+          <div><strong>Bunda Maya</strong><div class="text-yellow-400 text-sm">★★★★☆</div></div>
+        </div>
+        <p class="text-sm text-gray-600 italic">"Nasi box ayam enak dan porsi banyak. Next mau pesan aqiqah lagi untuk adiknya."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Pemotongan Halal -->
+  <section class="mb-12">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 inline-flex items-center gap-2"><i class="fas fa-video text-[#d43f7a]"></i> Video Proses Halal</h2>
+      <div class="w-24 h-0.5 bg-gradient-to-r from-[#d43f7a] to-[#e8669c] mx-auto mt-3 rounded-full"></div>
+    </div>
+    <div class="bg-gradient-to-br from-[#fce4ec] to-white rounded-2xl overflow-hidden shadow-xl border border-pink-100">
+      <video controls poster="https://placehold.co/800x450/d43f7a/white?text=Proses+Pemotongan+Halal+Aqiqah" class="w-full aspect-video object-cover">
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+      </video>
+      <div class="p-4 text-center">
+        <p class="text-sm text-gray-700"><i class="fas fa-check-circle text-emerald-500 mr-1"></i> Proses sesuai syariat Islam, higienis, dan didampingi tim dokter hewan berpengalaman.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Medsos -->
+  <section id="kontak" class="mb-6 scroll-mt-28 bg-gradient-pink-light rounded-3xl p-8 shadow-md">
+    <h2 class="text-2xl md:text-3xl font-serif-alt font-bold text-gray-800 mb-5 text-center">Hubungi Kami</h2>
+    <div class="flex justify-center gap-12 mb-6">
+      <a href="#" class="text-[#d43f7a] text-3xl transition hover:scale-110 hover:text-[#b8326a]"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-[#d43f7a] text-3xl transition hover:scale-110 hover:text-[#b8326a]"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/6285779068468" class="text-green-500 text-3xl transition hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="text-center text-sm space-y-2">
+      <p class="text-gray-700"><i class="fas fa-map-marker-alt text-[#d43f7a] mr-2"></i> Jl. Kebahagiaan No. 88, Jakarta Selatan</p>
+      <p class="text-gray-700"><i class="fas fa-phone-alt text-[#d43f7a] mr-2"></i> +62 812-3456-7890 (WA / Telepon)</p>
+      <p class="text-gray-700"><i class="fas fa-envelope text-[#d43f7a] mr-2"></i> hello@aqiqahbahagia.com</p>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-xs text-gray-400 border-t border-pink-100 mt-4">
+    <p>© 2025 Aqiqah Bahagia — Layanan Aqiqah Profesional & Halal | Siap melayani kebahagiaan buah hati Anda</p>
+  </footer>
+
+  <!-- WhatsApp Bubble -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/6285779068468?text=Halo%20saya%20tertarik%20paket%20aqiqah" class="bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all wa-pulse">
+      <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Active navigation highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  function updateActiveNav() {
+    let current = '';
+    const scrollPos = window.scrollY + 200;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('nav-active');
+      const linkTarget = link.getAttribute('data-nav');
+      if (linkTarget === current) {
+        link.classList.add('nav-active');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('load', updateActiveNav);
+
+  
+// Data Best Seller Packages prod 1
+const bestSellerData = {
+  "Hemat": {
+    bobot: "± 15 kg",
+    harga: { betina: 1800000, jantan: 2200000 },
+    hasil: { sate: 200, gule: 55 }
+  },
+  "Spesial": {
+    bobot: "± 17 kg",
+    harga: { betina: 2000000, jantan: 2400000 },
+    hasil: { sate: 225, gule: 70 }
+  },
+  "Super": {
+    bobot: "± 19 kg",
+    harga: { betina: 2200000, jantan: 2600000 },
+    hasil: { sate: 250, gule: 80 }
+  },
+  "Istimewa": {
+    bobot: "± 22 kg",
+    harga: { betina: 2500000, jantan: 2900000 },
+    hasil: { sate: 300, gule: 100 }
+  },
+  "Khusus": {
+    bobot: "± 25 kg",
+    harga: { betina: 3000000, jantan: 3400000 },
+    hasil: { sate: 370, gule: 120 }
+  },
+  "Jumbo": {
+    bobot: "± 28 kg",
+    harga: { betina: 3500000, jantan: 3900000 },
+    hasil: { sate: 450, gule: 140 }
+  }
+};
+
+// Format Rupiah
+function formatRupiah(angka) {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(angka);
+}
+
+// Update display when selection changes
+function updateDisplay() {
+  const typeSelect = document.getElementById('kambingType');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+  
+  const data = bestSellerData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  document.getElementById('tipeDisplay').innerHTML = `${selectedType} (${genderText})`;
+  document.getElementById('bobotDisplay').innerHTML = data.bobot;
+  document.getElementById('hargaDisplay').innerHTML = formatRupiah(harga);
+  document.getElementById('hasilDisplay').innerHTML = `${data.hasil.sate} tusuk sate<br>+ ${data.hasil.gule} porsi gule`;
+}
+
+// Generate WhatsApp message
+function generateWaMessage() {
+  const typeSelect = document.getElementById('kambingType');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+  const data = bestSellerData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  const message = `Halo Kak, saya mau pesan Paket Aqiqah BEST SELLER (Sate + Gule) dengan detail:
+
+🐐 Tipe: ${selectedType}
+🐐 Jenis Kelamin: ${genderText}
+⚖️ Bobot: ${data.bobot}
+💰 Harga: ${formatRupiah(harga)}
+🍽️ Hasil Masakan: ${data.hasil.sate} tusuk sate + ${data.hasil.gule} porsi gule
+
+Mohon info lebih lanjut untuk proses pemesanan. Terima kasih! 🙏`;
+  
+  return encodeURIComponent(message);
+}
+
+// WhatsApp link generator
+function sendToWhatsApp() {
+  const phoneNumber = "6285779068468"; // Ganti dengan nomor WA Anda
+  const message = generateWaMessage();
+  const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(waLink, '_blank');
+}
+
+// Event listeners
+document.getElementById('kambingType').addEventListener('change', updateDisplay);
+document.querySelectorAll('input[name="gender"]').forEach(radio => {
+  radio.addEventListener('change', updateDisplay);
+});
+document.getElementById('waButton').addEventListener('click', sendToWhatsApp);
+
+// Initialize display
+updateDisplay();
+
+
+// Data Paket 1 Menu Masakan (Gule) produk 2
+const paketGuleData = {
+  "Hemat": {
+    bobot: "± 15 kg",
+    harga: { betina: 1700000, jantan: 2100000 },
+    hasil: 75
+  },
+  "Spesial": {
+    bobot: "± 17 kg",
+    harga: { betina: 1900000, jantan: 2300000 },
+    hasil: 90
+  },
+  "Super": {
+    bobot: "± 19 kg",
+    harga: { betina: 2100000, jantan: 2500000 },
+    hasil: 115
+  },
+  "Istimewa": {
+    bobot: "± 22 kg",
+    harga: { betina: 2400000, jantan: 2800000 },
+    hasil: 130
+  },
+  "Khusus": {
+    bobot: "± 25 kg",
+    harga: { betina: 2900000, jantan: 3300000 },
+    hasil: 170
+  },
+  "Jumbo": {
+    bobot: "± 28 kg",
+    harga: { betina: 3400000, jantan: 3800000 },
+    hasil: 200
+  }
+};
+
+// Update display for Paket 2
+function updateDisplay2() {
+  const typeSelect = document.getElementById('kambingType2');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender2"]:checked').value;
+  
+  const data = paketGuleData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  document.getElementById('tipeDisplay2').innerHTML = `${selectedType} (${genderText})`;
+  document.getElementById('bobotDisplay2').innerHTML = data.bobot;
+  document.getElementById('hargaDisplay2').innerHTML = formatRupiah(harga);
+  document.getElementById('hasilDisplay2').innerHTML = `${data.hasil} porsi gule`;
+}
+
+// Generate WhatsApp message for Paket 2
+function generateWaMessage2() {
+  const typeSelect = document.getElementById('kambingType2');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender2"]:checked').value;
+  const data = paketGuleData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  const message = `Halo Kak, saya mau pesan Paket Aqiqah GULE KAMBING (1 Menu Masakan) dengan detail:
+
+🐐 Tipe: ${selectedType}
+🐐 Jenis Kelamin: ${genderText}
+⚖️ Bobot: ${data.bobot}
+💰 Harga: ${formatRupiah(harga)}
+🍽️ Hasil Masakan: ${data.hasil} porsi gule kambing spesial
+
+Mohon info lebih lanjut untuk proses pemesanan. Terima kasih! 🙏`;
+  
+  return encodeURIComponent(message);
+}
+
+// WhatsApp link generator for Paket 2
+function sendToWhatsApp2() {
+  const phoneNumber = "6285779068468";
+  const message = generateWaMessage2();
+  const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(waLink, '_blank');
+}
+
+// Event listeners for Paket 2
+document.getElementById('kambingType2').addEventListener('change', updateDisplay2);
+document.querySelectorAll('input[name="gender2"]').forEach(radio => {
+  radio.addEventListener('change', updateDisplay2);
+});
+document.getElementById('waButton2').addEventListener('click', sendToWhatsApp2);
+
+// Initialize display for Paket 2
+updateDisplay2();
+
+
+
+// Data Paket Kambing Guling (produk 3)
+const paketGulingData = {
+  "Hemat": {
+    bobot: "± 15 kg",
+    harga: { betina: 1800000, jantan: 2200000 },
+    hasil: 30
+  },
+  "Spesial": {
+    bobot: "± 17 kg",
+    harga: { betina: 2000000, jantan: 2400000 },
+    hasil: 40
+  },
+  "Super": {
+    bobot: "± 19 kg",
+    harga: { betina: 2200000, jantan: 2600000 },
+    hasil: 55
+  },
+  "Istimewa": {
+    bobot: "± 22 kg",
+    harga: { betina: 2500000, jantan: 2900000 },
+    hasil: 75
+  },
+  "Khusus": {
+    bobot: "± 25 kg",
+    harga: { betina: 3000000, jantan: 3400000 },
+    hasil: 100
+  },
+  "Jumbo": {
+    bobot: "± 28 kg",
+    harga: { betina: 3500000, jantan: 3900000 },
+    hasil: 120
+  }
+};
+
+// Update display for Paket 3 (Kambing Guling)
+function updateDisplay3() {
+  const typeSelect = document.getElementById('kambingType3');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender3"]:checked').value;
+  
+  const data = paketGulingData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  document.getElementById('tipeDisplay3').innerHTML = `${selectedType} (${genderText})`;
+  document.getElementById('bobotDisplay3').innerHTML = data.bobot;
+  document.getElementById('hargaDisplay3').innerHTML = formatRupiah(harga);
+  document.getElementById('hasilDisplay3').innerHTML = `${data.hasil} porsi guling`;
+}
+
+// Generate WhatsApp message for Paket 3
+function generateWaMessage3() {
+  const typeSelect = document.getElementById('kambingType3');
+  const selectedType = typeSelect.value;
+  const selectedGender = document.querySelector('input[name="gender3"]:checked').value;
+  const data = paketGulingData[selectedType];
+  const harga = data.harga[selectedGender];
+  const genderText = selectedGender === 'betina' ? 'Betina' : 'Jantan';
+  
+  const message = `Halo Kak, saya mau pesan Paket Aqiqah KAMBING GULING dengan detail:
+
+🐐 Tipe: ${selectedType}
+🐐 Jenis Kelamin: ${genderText}
+⚖️ Bobot: ${data.bobot}
+💰 Harga: ${formatRupiah(harga)}
+🍽️ Hasil Masakan: ${data.hasil} porsi kambing guling utuh
+
+Mohon info lebih lanjut untuk proses pemesanan. Terima kasih! 🙏`;
+  
+  return encodeURIComponent(message);
+}
+
+// WhatsApp link generator for Paket 3
+function sendToWhatsApp3() {
+  const phoneNumber = "6285779068468";
+  const message = generateWaMessage3();
+  const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(waLink, '_blank');
+}
+
+// Event listeners for Paket 3
+document.getElementById('kambingType3').addEventListener('change', updateDisplay3);
+document.querySelectorAll('input[name="gender3"]').forEach(radio => {
+  radio.addEventListener('change', updateDisplay3);
+});
+document.getElementById('waButton3').addEventListener('click', sendToWhatsApp3);
+
+// Initialize display for Paket 3
+updateDisplay3();
+
+
+// Data Nasi Box berdasarkan JSON
+const nasiBoxData = [
+  {
+    price: 13000,
+    menu: ["Box Eksklusif", "Nasi putih", "Kerupuk Udang", "Buah", "Acar", "Sendok Tissu"]
+  },
+  {
+    price: 15000,
+    menu: ["Box Eksklusif", "Nasi putih", "Bihun Goreng", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  },
+  {
+    price: 18000,
+    menu: ["Box Eksklusif", "Nasi putih", "Bihun Goreng", "Sambel Kentang Ati", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  },
+  {
+    price: 19000,
+    menu: ["Box Eksklusif", "Nasi putih", "Sambel Kentang Ati", "Telor Pindang", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  },
+  {
+    price: 21000,
+    menu: ["Box Eksklusif", "Nasi putih", "Bihun Goreng", "Sambel Kentang Ati", "Telor Pindang", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  },
+  {
+    price: 22000,
+    menu: ["Box Eksklusif", "Nasi KEBULI Basmati", "Krupuk Udang", "Buah", "Acar Merah", "Sendok Tissu"]
+  }
+];
+
+// Format Rupiah
+function formatRupiah(angka) {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(angka);
+}
+
+// Function to update menu display
+function updateMenuDisplay(menuList, elementId) {
+  const container = document.getElementById(elementId);
+  if (!container) return;
+  container.innerHTML = menuList.map(item => `<li>• ${item}</li>`).join('');
+}
+
+// Function for Nasi Box 1
+function updateNasiBox1() {
+  const select = document.getElementById('nasiBoxType');
+  const index = parseInt(select.value);
+  const data = nasiBoxData[index];
+  
+  document.getElementById('nasiPriceDisplay').innerHTML = formatRupiah(data.price);
+  updateMenuDisplay(data.menu, 'menuDisplay');
+}
+
+// Function for Nasi Box 2
+function updateNasiBox2() {
+  const select = document.getElementById('nasiBoxType2');
+  const index = parseInt(select.value);
+  const data = nasiBoxData[index];
+  
+  document.getElementById('nasiPriceDisplay2').innerHTML = formatRupiah(data.price);
+  updateMenuDisplay(data.menu, 'menuDisplay2');
+}
+
+// Generate WhatsApp message for Nasi Box
+function generateWaMessageNasi(selectId, boxNumber) {
+  const select = document.getElementById(selectId);
+  const index = parseInt(select.value);
+  const data = nasiBoxData[index];
+  const paketNumber = index + 1;
+  
+  const menuText = data.menu.map(item => `   • ${item}`).join('\n');
+  
+  const message = `Halo Kak, saya mau pesan PAKET NASI BOX EKSKLUSIF dengan detail:
+
+📦 Paket ${paketNumber}
+💰 Harga: ${formatRupiah(data.price)}
+📋 Detail Isi:
+${menuText}
+
+Mohon info lebih lanjut untuk proses pemesanan. Terima kasih! 🙏`;
+  
+  return encodeURIComponent(message);
+}
+
+// WhatsApp link generator
+function sendToWhatsAppNasi(selectId, boxNumber) {
+  const phoneNumber = "6285779068468";
+  const message = generateWaMessageNasi(selectId, boxNumber);
+  const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(waLink, '_blank');
+}
+
+// Event listeners for Nasi Box 1
+if (document.getElementById('nasiBoxType')) {
+  document.getElementById('nasiBoxType').addEventListener('change', updateNasiBox1);
+  document.getElementById('waButtonNasi').addEventListener('click', () => sendToWhatsAppNasi('nasiBoxType', 1));
+  updateNasiBox1();
+}
+
+// Event listeners for Nasi Box 2
+if (document.getElementById('nasiBoxType2')) {
+  document.getElementById('nasiBoxType2').addEventListener('change', updateNasiBox2);
+  document.getElementById('waButtonNasi2').addEventListener('click', () => sendToWhatsAppNasi('nasiBoxType2', 2));
+  updateNasiBox2();
+}
+
+
+// Data Nasi Box Ayam berdasarkan JSON
+const nasiAyamData = [
+  {
+    price: 23000,
+    menu: ["Box Eksklusif", "Nasi putih", "Ayam Bakar 1/4 ekor", "Lalapan", "Sambal", "Kerupuk Udang", "Sendok Tissu"]
+  },
+  {
+    price: 26000,
+    menu: ["Box Eksklusif", "Nasi putih", "Ayam Bakar 1/4 ekor", "Lalapan", "Sambal", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  },
+  {
+    price: 29000,
+    menu: ["Box Eksklusif", "Nasi putih", "Ayam Bakar 1/4 ekor", "Sambel kentang ati", "Lalapan", "Sambal", "Kerupuk Udang", "Buah", "Sendok Tissu"]
+  }
+];
+
+// Function to update menu display
+function updateMenuDisplayAyam(menuList, elementId) {
+  const container = document.getElementById(elementId);
+  if (!container) return;
+  container.innerHTML = menuList.map(item => `<li>• ${item}</li>`).join('');
+}
+
+// Function for Nasi Ayam 1
+function updateNasiAyam1() {
+  const select = document.getElementById('nasiAyamType');
+  const index = parseInt(select.value);
+  const data = nasiAyamData[index];
+  
+  document.getElementById('nasiAyamPriceDisplay').innerHTML = formatRupiah(data.price);
+  updateMenuDisplayAyam(data.menu, 'nasiAyamMenuDisplay');
+}
+
+// Function for Nasi Ayam 2
+function updateNasiAyam2() {
+  const select = document.getElementById('nasiAyamType2');
+  const index = parseInt(select.value);
+  const data = nasiAyamData[index];
+  
+  document.getElementById('nasiAyamPriceDisplay2').innerHTML = formatRupiah(data.price);
+  updateMenuDisplayAyam(data.menu, 'nasiAyamMenuDisplay2');
+}
+
+// Generate WhatsApp message for Nasi Ayam
+function generateWaMessageNasiAyam(selectId) {
+  const select = document.getElementById(selectId);
+  const index = parseInt(select.value);
+  const data = nasiAyamData[index];
+  const paketNumber = index + 1;
+  
+  let paketName = "";
+  if (paketNumber === 1) paketName = "Ayam Bakar + Lalapan";
+  else if (paketNumber === 2) paketName = "Ayam Bakar + Buah";
+  else paketName = "Ayam Bakar + Ati + Buah";
+  
+  const menuText = data.menu.map(item => `   • ${item}`).join('\n');
+  
+  const message = `Halo Kak, saya mau pesan PAKET NASI BOX AYAM dengan detail:
+
+🍗 Paket ${paketNumber} - ${paketName}
+💰 Harga: ${formatRupiah(data.price)}
+📋 Detail Isi:
+${menuText}
+
+Mohon info lebih lanjut untuk proses pemesanan. Terima kasih! 🙏`;
+  
+  return encodeURIComponent(message);
+}
+
+// WhatsApp link generator for Nasi Ayam
+function sendToWhatsAppNasiAyam(selectId) {
+  const phoneNumber = "6285779068468";
+  const message = generateWaMessageNasiAyam(selectId);
+  const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(waLink, '_blank');
+}
+
+// Event listeners for Nasi Ayam 1
+if (document.getElementById('nasiAyamType')) {
+  document.getElementById('nasiAyamType').addEventListener('change', updateNasiAyam1);
+  document.getElementById('waButtonNasiAyam').addEventListener('click', () => sendToWhatsAppNasiAyam('nasiAyamType'));
+  updateNasiAyam1();
+}
+
+// Event listeners for Nasi Ayam 2
+if (document.getElementById('nasiAyamType2')) {
+  document.getElementById('nasiAyamType2').addEventListener('change', updateNasiAyam2);
+  document.getElementById('waButtonNasiAyam2').addEventListener('click', () => sendToWhatsAppNasiAyam('nasiAyamType2'));
+  updateNasiAyam2();
+}
+
+</script>
+</body>
+</html>
